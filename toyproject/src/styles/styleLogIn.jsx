@@ -14,21 +14,30 @@ export const Container = styled.div`
 export const Header = styled.div`
   flex-shrink: 0;
 `;
-export const Box = styled.div`
+export const Logo = styled.img`
+  margin: 100px 0 40px;
+`;
+
+export const Box = styled.input`
   width: 353px;
   height: 55px;
+  margin-top: 8px;
   flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #5061ff;
-  background: #fff;
+  padding: 0 16px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
 `;
 export const Text = styled.div`
   color: #000;
   font-family: SUIT;
   font-size: 15px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  margin-top: 24px;
+  align-self: flex-start;
+  margin-left: 20px;
 `;
 export const Btn = styled.button`
   width: 353px;
@@ -36,5 +45,18 @@ export const Btn = styled.button`
   flex-shrink: 0;
   border-radius: 10px;
   background: #5061ff;
-  color: #000;
+  color: #fff;
+
+  margin-top: 41px;
+  border: none;
+  font-family: SUIT;
+  font-size: 16px;
+  font-weight: 600;
+  box-sizing: border-box;
+`;
+export const SignUpBtn = styled(Btn)`
+  margin-top: 14px;
+  background: #fff;
+  color: #5061ff;
+  border: 1px solid #5061ff;
 `;

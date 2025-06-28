@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import * as SU from "../styles/styleSignUp_agree";
 const SignUp_agree = () => {
   const navigate = useNavigate();
+  const BackBtn = () => {
+    navigate(`/LogIn`);
+  };
   const GoSignUp = () => {
     navigate(`/SignUp`);
   };
@@ -16,6 +19,7 @@ const SignUp_agree = () => {
       ></img>
       <SU.Header>
         <SU.BackBtn
+          onClick={BackBtn}
           src={`${process.env.PUBLIC_URL}/images/BackBtn.svg`}
           alt="뒤로가기"
           width="15"
@@ -33,13 +37,13 @@ const SignUp_agree = () => {
       </SU.Step>
       <SU.Text>1. 목적 및 이용 계약 체결</SU.Text>
       <SU.TermBox>
-        <SU.TermText>
+        <SU.TermContent>
           이 약관은 팀 매칭 서비스 Tingle(팅글) 의 이용과 관련하여, 이용자가
           서비스에 회원으로 가입하고, 회사가 이를 승인함으로써 체결되는
           이용계약의 조건을 정합니다. 가입자는 본 약관에 동의함으로써 팀원 매칭,
           커뮤니티, 프로젝트 생성 등 팅글이 제공하는 모든 기능을 사용할 수 있는
           권한을 부여받습니다.
-        </SU.TermText>
+        </SU.TermContent>
       </SU.TermBox>
       <SU.TermBtnGroup>
         <SU.TermOption>
@@ -51,7 +55,7 @@ const SignUp_agree = () => {
       </SU.TermBtnGroup>
       <SU.Text>2. 약관 제목</SU.Text>
       <SU.TermBox>
-        <SU.TermText>
+        <SU.TermContent>
           회원은 자신의 정보를 정확히 기입하고, 개인정보 변경 시 이를 즉시
           수정해야 하며, 법령 및 서비스 운영정책을 준수해야 합니다. 회사는
           다음과 같은 경우, 서비스 이용을 제한하거나 회원 자격을 박탈할 수
@@ -60,7 +64,7 @@ const SignUp_agree = () => {
           안전하게 관리되며, 자세한 사항은 개인정보처리방침에 따릅니다. 회사는
           시스템 점검, 기술적 문제, 법적 사유 등으로 서비스 제공을 일시 중단할
           수 있으며, 이에 대해 사전 또는 사후 공지합니다.
-        </SU.TermText>
+        </SU.TermContent>
       </SU.TermBox>
       <SU.TermBtnGroup>
         <SU.TermOption>

@@ -8,6 +8,7 @@ import SignUp_complete from "./pages/SignUp_complete";
 import Profile from "./pages/profile";
 import Profile_edit from "./pages/Profile_edit";
 import Project from "./pages/Project/Project";
+import Group from "./pages/Group/Group";
 function App() {
   return (
     <BrowserRouter>

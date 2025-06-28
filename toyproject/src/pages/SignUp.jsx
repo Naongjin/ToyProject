@@ -31,23 +31,32 @@ const SignUp_agree = () => {
         <br />
         회원정보 입력하기
       </SU.Step>
-      <SU.Text>이름*</SU.Text>
-      <SU.Input id="name"></SU.Input>
-      <SU.Text>아이디*</SU.Text>
-      <SU.Input id="ID"></SU.Input>
-      <SU.Text>비밀번호*</SU.Text>
-      <SU.Input id="PW"></SU.Input>
-      <SU.Text>비밀번호 확인*</SU.Text>
-      <SU.Input id="configPW"></SU.Input>
-      <SU.Text>전화번호</SU.Text>
-      <SU.Input id="Tel"></SU.Input>
-      <SU.Text>메일 주소</SU.Text>
-      <SU.Input id="Mail"></SU.Input>
-      <SU.Marketing_Agree>마케팅 정보 수신 동의</SU.Marketing_Agree>
-      <SU.AgreeOption>
-        <SU.AgreeBtn /> 동의
-      </SU.AgreeOption>
-
+      <SU.SUContainer>
+        <SU.Text>
+          이름<span style={{ color: "#E01B1B" }}>*</span>
+        </SU.Text>
+        <SU.Input id="name" placeholder="실명"></SU.Input>
+        <SU.Text>
+          아이디<span style={{ color: "#E01B1B" }}>*</span>
+        </SU.Text>
+        <SU.Input id="ID"></SU.Input>
+        <SU.Text>
+          비밀번호<span style={{ color: "#E01B1B" }}>*</span>
+        </SU.Text>
+        <SU.Input id="PW"></SU.Input>
+        <SU.Text>
+          비밀번호 확인<span style={{ color: "#E01B1B" }}>*</span>
+        </SU.Text>
+        <SU.Input id="configPW"></SU.Input>
+        <SU.Text>전화번호</SU.Text>
+        <SU.Input id="Tel"></SU.Input>
+        <SU.Text>메일 주소</SU.Text>
+        <SU.Input id="Mail"></SU.Input>
+        <SU.Marketing_Agree>마케팅 정보 수신 동의</SU.Marketing_Agree>
+        <SU.AgreeOption>
+          <SU.AgreeBtn /> 동의
+        </SU.AgreeOption>
+      </SU.SUContainer>
       <SU.NextBtn onClick={GoSignUp}>다음</SU.NextBtn>
     </SU.Container>
   );

@@ -32,11 +32,11 @@ const SignUp_agree = () => {
         회원가입 완료
       </SU.Step>
       <SU.Congrat>
-        <span>
-          <SU.C_Name>김솜솜</SU.C_Name>님,
-        </span>
-        <br />
-        가입을 축하드립니다!
+        <SU.C_Name>
+          김솜솜<span style={{ fontSize: "25px", color: "#000" }}>님,</span>
+        </SU.C_Name>
+        <SU.C_Text>가입을 축하드립니다!</SU.C_Text>
+        <SU.Confetti src={`${process.env.PUBLIC_URL}/images/confetti.svg`} />
       </SU.Congrat>
       <SU.NextBtn onClick={GoProfile}>로그인 하러 가기</SU.NextBtn>
     </SU.Container>

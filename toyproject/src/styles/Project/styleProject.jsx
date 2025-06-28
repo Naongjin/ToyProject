@@ -50,6 +50,8 @@ export const CategoryBox = styled.div`
   width: 393px;
   height: 80px;
   gap: 10px;
+  display: flex;
+  flex-direction: row;
 `;
 export const Category = styled.div`
   width: 70px;
@@ -70,6 +72,9 @@ export const Text = styled.text`
   line-height: normal;
 `;
 export const ProjectBox = styled.div`
+  display: flex;
+  flex-dirction: row;
+  justify-content: center;
   width: 353px;
   height: 118px;
   flex-shrink: 0;
@@ -77,7 +82,7 @@ export const ProjectBox = styled.div`
   background: #fff;
   box-shadow: 0px 0px 2px 2px #f2f2f2;
 `;
-export const PJImg = styled.img`
+export const PJImg = styled.div`
   width: 105px;
   height: 105px;
   flex-shrink: 0;
@@ -86,7 +91,6 @@ export const PJImg = styled.img`
 export const PJ = styled.div`
   width: 200px;
   height: 118px;
-  display: flex;
 `;
 export const PJName = styled.div`
   color: #000;

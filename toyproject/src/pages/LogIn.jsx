@@ -21,13 +21,13 @@ const LogIn = () => {
         ></img>
       </L.Header>
 
-      <img
+      <L.Logo
         src={`${process.env.PUBLIC_URL}/images/logo.png`}
         alt="logo"
         width="173.695px"
         height="79px"
         aspect-ratio="173.70/79.00"
-      ></img>
+      ></L.Logo>
 
       <L.Text>아이디</L.Text>
       <L.Box id="IDBox"></L.Box>
@@ -36,9 +36,9 @@ const LogIn = () => {
       <L.Btn id="SIBtn" onClick={GoProject}>
         로그인
       </L.Btn>
-      <L.Btn id="SUBtn" onClick={GoSignUp}>
+      <L.SignUpBtn id="SUBtn" onClick={GoSignUp}>
         회원가입
-      </L.Btn>
+      </L.SignUpBtn>
     </L.Container>
   );
 };

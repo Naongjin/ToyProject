@@ -1,5 +1,4 @@
 import styled from "styled-components";
-//import { NextBtn } from "./styleSignUp_agree";
 export const Container = styled.div`
   position: relative;
   margin: 0 auto;
@@ -32,6 +31,7 @@ export const SUText = styled.div`
 `;
 export const Header = styled.div`
   flex-shrink: 0;
+  display: flex;
   flex-direction: row;
   align-items: center;
 `;
@@ -72,17 +72,26 @@ export const Text = styled.div`
   font-weight: 700;
   line-height: normal;
 `;
+export const SUContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
 export const Input = styled.input`
-  width: 64px;
-  height: 18px;
+  width: 304px;
+  height: 41px;
   flex-shrink: 0;
   color: #969696;
-  text-align: center;
+  text-align: left;
   font-family: SUIT;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  border: transparent;
+  border-bottom: 1px solid #5061ff;
+  margin-top: 5px;
+  margin-bottom: 10px;
 `;
 export const Marketing_Agree = styled.div`
   width: 140px;
@@ -94,14 +103,17 @@ export const Marketing_Agree = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-top: 41px;
 `;
 export const AgreeOption = styled.div`
   height: 20px;
   display: flex;
   text-align: center;
-  flex-dirction: row;
+  flex-direction: row;
   align-items: center;
   gap: 10px;
+  margin-top: 13px;
+  margin-bottom: 26px;
 `;
 export const AgreeBtn = styled.div`
   width: 13px;

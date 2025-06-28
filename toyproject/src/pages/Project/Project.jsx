@@ -33,22 +33,25 @@ const Project = () => {
         </P.CategoryBox>
         <P.Text>3개의 게시물</P.Text>
         <P.ProjectBox>
-          <P.PJImg>
-            <P.PJ>
-              <P.PJName></P.PJName>
-              <P.PJDetail></P.PJDetail>
-              <img
-                src={`${process.env.PUBLIC_URL}/images/PJ_Comment.svg`}
-                width="17px"
-                height="22px"
-              />
-              <img
-                src={`${process.env.PUBLIC_URL}/images/PJ_Like.svg`}
-                width="18px"
-                height="18px"
-              />
-            </P.PJ>
-          </P.PJImg>
+          <P.PJImg></P.PJImg>
+          <P.PJ>
+            <P.PJName>[공모전] | 2025 Design De∙∙∙</P.PJName>
+            <P.PJDetail>
+              2025년 DesignDen 대학생 로고 디자인 공모전을 진행합니다!
+            </P.PJDetail>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/PJ_Comment.svg`}
+              alt="comment"
+              width="17px"
+              height="22px"
+            />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/PJ_Like.svg`}
+              alt="like"
+              width="18px"
+              height="18px"
+            />
+          </P.PJ>
         </P.ProjectBox>
       </P.ProjectContainer>
     </P.Container>

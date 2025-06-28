@@ -6,15 +6,13 @@ export const Container = styled.div`
   width: 393px;
   height: 850px;
   background: #fff;
-  align-items: center;
   display: flex;
+  align-items: center;
   flex-direction: column;
 `;
 export const BackBtn = styled.img`
   position: absolute;
-
   left: 20px;
-
   height: 23px;
   flex-shrink: 0;
 `;
@@ -25,6 +23,7 @@ export const SUText = styled.div`
   color: #000;
   text-align: center;
   font-family: "Hakgyoansim Puzzle OTF";
+
   font-size: 25px;
   font-style: normal;
   font-weight: 900;
@@ -32,6 +31,7 @@ export const SUText = styled.div`
 `;
 export const Header = styled.div`
   flex-shrink: 0;
+  display: flex;
   flex-direction: row;
   align-items: center;
 `;
@@ -41,11 +41,11 @@ export const StatusBar = styled.div`
   flex-shrink: 0;
   border-radius: 10px;
   background: #f5f5f5;
+  margin: 16px 0 8px;
 `;
 export const Status = styled.div`
   width: 56px;
   height: 13px;
-  flex-shrink: 0;
   border-radius: 10px;
   background: #5061ff;
 `;
@@ -68,38 +68,65 @@ export const Text = styled.div`
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  width: 90%;
+  text-align: left;
 `;
 export const TermBox = styled.div`
   width: 353px;
   height: 140px;
-  flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #5061ff;
   background: #fff;
   box-shadow: 0px 0px 2px 2px #f2f2f2;
-  overflow-y: auto;
+  overflow-y: scroll; /* scroll로 고정 */
+  margin-bottom: 15px;
+  box-sizing: border-box;
+
+  padding: 0; /* padding 제거, 내부 TermContent에서만 */
+
+  /* 스크롤바 */
+  &::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #5061ff;
+    border-radius: 10px;
+    width: 6px;
+  }
+`;
+export const TermContent = styled.div`
+  padding: 12px 16px 12px 12px; /* 오른쪽 여백을 조금 더 */
+  font-family: SUIT;
+  font-size: 13px;
+  line-height: 20px;
 `;
 export const TermBtnGroup = styled.div`
   display: flex;
-  gap: 10px; /* 버튼 사이 간격 */
+  gap: 16px;
   margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: right;
 `;
+
 export const TermOption = styled.div`
   display: flex;
   align-items: center;
-  gap: 5px; /* 버튼과 텍스트 사이 간격 */
+  flex-direction: row;
+  gap: 6px;
+  cursor: pointer;
+  font-family: SUIT;
+  font-size: 14px;
 `;
 
-export const TermText = styled.div`
-  width: 318px;
-  flex-shrink: 0;
-  color: #000;
-  font-family: SUIT;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 20px;
-`;
 export const AgreeAll = styled.div`
   width: 353px;
   height: 55px;
@@ -115,10 +142,11 @@ export const AgreeAll = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin: 16px 0;
 `;
 
 export const NextBtn = styled.div`
-  width: 393px;
+  width: 100%;
   height: 90px;
   display: flex;
   justify-content: center;
@@ -127,9 +155,9 @@ export const NextBtn = styled.div`
   color: #fff;
   font-family: SUIT;
   font-size: 20px;
-  font-style: normal;
   font-weight: 800;
-  line-height: normal;
+  cursor: pointer;
+  margin-top: auto;
 `;
 
 export const TermBtn = styled.div`

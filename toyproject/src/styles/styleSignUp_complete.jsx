@@ -67,8 +67,11 @@ export const Congrat = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  margin-top: 73px;
+  margin-bottom: 71px;
 `;
 export const C_Name = styled.span`
   color: #5773ff;
@@ -78,6 +81,19 @@ export const C_Name = styled.span`
   font-style: normal;
   font-weight: 400;
   line-height: 50px; /* 125% */
+  position: relative;
+  z-index: 2;
+`;
+export const C_Text = styled.div`
+  color: #000;
+  text-align: center;
+  font-family: "BM JUA_OTF";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  position: relative;
+  z-index: 2;
 `;
 export const NextBtn = styled.div`
   width: 336px;
@@ -95,4 +111,16 @@ export const NextBtn = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-top: 54px;
+`;
+export const Confetti = styled.img`
+  position: relative;
+  width: 100%;
+  height: 247px;
+  border-radius: 123.5px;
+
+  position: fixed;
+  top: 130px;
+  left: 0px;
+  z-index: 0; /* 텍스트 뒤로 깔림 */
 `;
