@@ -33,6 +33,7 @@ export const Header = styled.div`
   flex-shrink: 0;
   flex-direction: row;
   align-items: center;
+  display: flex;
 `;
 export const StatusBar = styled.div`
   width: 353px;
