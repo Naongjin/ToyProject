@@ -14,8 +14,6 @@ export const BackBtn = styled.img`
   left: 20px;
   height: 23px;
   flex-shrink: 0;
-  width="15"
-  height="27"
 `;
 export const PText = styled.div`
   width: 125px;
@@ -90,7 +88,7 @@ export const PJ = styled.div`
   height: 118px;
   display: flex;
 `;
-export const PJName = styled.text`
+export const PJName = styled.div`
   color: #000;
   font-family: SUIT;
   font-size: 17px;
@@ -98,7 +96,7 @@ export const PJName = styled.text`
   font-weight: 800;
   line-height: normal;
 `;
-export const PJDetail = styled.text`
+export const PJDetail = styled.div`
   color: #000;
   font-family: SUIT;
   font-size: 12px;

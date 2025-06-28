@@ -13,7 +13,7 @@ const Project = () => {
         alt="Header"
         width="345px"
         height="27px"
-      ></img>
+      />
       <P.Header>
         <P.BackBtn
           src={`${process.env.PUBLIC_URL}/images/BackBtn.svg`}
@@ -37,7 +37,6 @@ const Project = () => {
             <P.PJ>
               <P.PJName></P.PJName>
               <P.PJDetail></P.PJDetail>
-
               <img
                 src={`${process.env.PUBLIC_URL}/images/PJ_Comment.svg`}
                 width="17px"
