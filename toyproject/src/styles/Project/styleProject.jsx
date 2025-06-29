@@ -37,14 +37,22 @@ export const ProjectContainer = styled.div`
   height: 722px;
   flex-shrink: 0;
   background: linear-gradient(180deg, rgba(220, 234, 255, 0.3) 0%, #fff 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;
 export const Search = styled.div`
   width: 353px;
   height: 36px;
-  flex-shrink: 0;
   border-radius: 20px;
   border: 1px solid #5061ff;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0 9px;
+  margin-top: 22px;
+  margin-bottom: 18px;
 `;
 export const CategoryBox = styled.div`
   width: 393px;
@@ -61,6 +69,11 @@ export const Category = styled.div`
   border: 1px solid #5061ff;
   background: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: inline-block;
+  padding: 6px 8px;
+  justify-content: center;
+  align-items: center;
 `;
 export const Text = styled.text`
   color: #000;

@@ -23,7 +23,13 @@ const Project = () => {
         <img src={`${process.env.PUBLIC_URL}/images/Edit.svg`} />
       </P.Header>
       <P.ProjectContainer>
-        <P.Search></P.Search>
+        <P.Search>
+          <img
+            src={`${process.env.PUBLIC_URL}/images/Lens.svg`}
+            width="18px"
+            height="18px"
+          />
+        </P.Search>
         <P.CategoryBox>
           <P.Category>전체</P.Category>
           <P.Category>조별과제</P.Category>
