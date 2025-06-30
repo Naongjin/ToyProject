@@ -17,6 +17,7 @@ const Profile = () => {
       <P.Header>
         <P.BackBtn
           src={`${process.env.PUBLIC_URL}/images/BackBtn.svg`}
+          onClick={() => window.history.back()}
           alt="뒤로가기"
         />
         <P.PText>마이</P.PText>

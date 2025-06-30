@@ -47,6 +47,7 @@ const Profile_edit = () => {
       />
       <P.Header>
         <P.BackBtn
+          onClick={() => window.history.back()}
           src={`${process.env.PUBLIC_URL}/images/BackBtn.svg`}
           alt="뒤로가기"
         />

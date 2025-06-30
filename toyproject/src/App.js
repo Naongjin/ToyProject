@@ -8,7 +8,13 @@ import SignUp_complete from "./pages/SignUp_complete";
 import Profile from "./pages/profile";
 import Profile_edit from "./pages/Profile_edit";
 import Project from "./pages/Project/Project";
+import ProjectDetail from "./pages/Project/Project_detail";
 import Group from "./pages/Group/Group";
+import MyGroup from "./pages/Group/My_group";
+import GroupDetail from "./pages/Group/Group_detail";
+import MyGroupDetail from "./pages/Group/My_group_detail";
+import GroupCreate from "./pages/Group/Create_group";
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +27,12 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile_edit" element={<Profile_edit />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/project_detail" element={<ProjectDetail />} />
+        <Route path="/group" element={<Group />} />
+        <Route path="/mygroup" element={<MyGroup />} />
+        <Route path="/group_detail" element={<GroupDetail />} />
+        <Route path="/mygroup_detail" element={<MyGroupDetail />} />
+        <Route path="/group_create" element={<GroupCreate />} />
       </Routes>
     </BrowserRouter>
   );

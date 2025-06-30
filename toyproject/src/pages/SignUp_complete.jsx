@@ -17,6 +17,7 @@ const SignUp_agree = () => {
       <SU.Header>
         <SU.BackBtn
           src={`${process.env.PUBLIC_URL}/images/BackBtn.svg`}
+          onClick={() => window.history.back()}
           alt="뒤로가기"
           width="15"
           height="27"
