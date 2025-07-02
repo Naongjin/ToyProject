@@ -6,7 +6,7 @@ import * as S from "../../styles/Project/styleProject_detail";
 const ProjectDetail = () => {
   // 예시 데이터
   const project = {
-    image: `${process.env.PUBLIC_URL}/images/project.png`,
+    image: `${process.env.PUBLIC_URL}/image/PJImg.png`,
     title: "2025 국가유산 재난안전 공모전",
     meta: [
       { label: "프로젝트 유형", value: "공모전" },
@@ -16,42 +16,45 @@ const ProjectDetail = () => {
       { label: "공모기간", value: "2024.11.25~12.31" },
       { label: "사이트", value: "페이지 바로가기" },
     ],
-    commentCount: 1,
-    bookmarkCount: 9,
+
     comments: [
       {
-        author: "김멋사",
+        author: "이동덕",
         date: "2025.03.02",
-        text: "인원 수에 제한이 있을까요..?",
+        text: "혹시 해당 공모전 언제까지 진행하는지 알 수 있을까요?",
       },
     ],
   };
 
   return (
     <S.Container>
-      {/* 헤더 */}
-      <S.Header>
-        <P.BackBtn
-          src={`${process.env.PUBLIC_URL}/images/BackBtn.svg`}
+      <S.Bar>
+        <img
+          src={`${process.env.PUBLIC_URL}/image/halfX.svg`}
           onClick={() => window.history.back()}
-          alt="뒤로가기"
         />
-        <S.Title>프로젝트 상세</S.Title>
-      </S.Header>
+        <div className="center">프로젝트 상세</div>
+      </S.Bar>
 
-      {/* 프로젝트 이미지 */}
-      <S.Image src={project.image} alt="프로젝트" />
-
-      {/* 아이콘(댓글·북마크) */}
-      <S.IconRow>
-        <IoMdChatbubbles size={18} />
-        <S.IconCount>{project.commentCount}</S.IconCount>
-        <IoIosBookmark size={18} />
-        <S.IconCount>{project.bookmarkCount}</S.IconCount>
-      </S.IconRow>
+      <S.ImageBox>
+        <S.Image
+          src={`${process.env.PUBLIC_URL}/image/PJImg.svg`}
+          alt="프로젝트"
+        />
+        <S.IconRow>
+          <S.CommentImg src={`${process.env.PUBLIC_URL}/image/comment.svg`} />
+          <S.IconCount>1</S.IconCount>
+          <S.ScrapImg src={`${process.env.PUBLIC_URL}/image/scrap_blue.svg`} />
+          <S.IconCount>9</S.IconCount>
+        </S.IconRow>
+      </S.ImageBox>
 
       {/* 프로젝트 제목 */}
-      <S.ProjectTitle>{project.title}</S.ProjectTitle>
+      <S.ProjectTitle>
+        2025 국가유산
+        <br />
+        재난안전 공모전
+      </S.ProjectTitle>
 
       {/* 메타 정보 */}
       <S.MetaList>
@@ -65,19 +68,21 @@ const ProjectDetail = () => {
 
       {/* 댓글 섹션 */}
       <S.CommentSection>
-        <S.CommentCount>댓글 {project.commentCount}</S.CommentCount>
+        <S.CommentCount>댓글 1 {project.commentCount}</S.CommentCount>
+        <hr style={{ color: "#D9D9D9" }} />
         {project.comments.map((c, i) => (
           <S.Comment key={i}>
-            <S.CommentAuthor>{c.author}</S.CommentAuthor>
-            <S.CommentDate>{c.date}</S.CommentDate>
+            <S.CommentHeader>
+              <S.CommentAuthor>{c.author}</S.CommentAuthor>
+              <S.CommentDate>{c.date}</S.CommentDate>
+            </S.CommentHeader>
             <S.CommentText>{c.text}</S.CommentText>
           </S.Comment>
         ))}
       </S.CommentSection>
 
-      {/* 입력창 */}
       <S.InputWrapper>
-        <S.Input placeholder="댓글을 입력하세요." />
+        <S.Input />
         <S.SendButton>➤</S.SendButton>
       </S.InputWrapper>
     </S.Container>

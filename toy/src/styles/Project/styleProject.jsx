@@ -11,12 +11,24 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
 `;
-
-export const BackBtn = styled.img`
-  position: absolute;
-  left: 20px;
-  height: 23px;
-  flex-shrink: 0;
+export const Bar = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  height: 50px;
+  width: 100%;
+  .center {
+    flex: 1; // 남은 공간을 모두 차지
+    text-align: center;
+    font-family: "HakgyoansimPuzzleTTF-Black";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 `;
 
 export const PText = styled.div`
@@ -32,17 +44,6 @@ export const PText = styled.div`
   line-height: normal;
 `;
 
-export const Header = styled.div`
-  position: relative; /* ⭐️ 필수! 자식 absolute 기준 */
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 393px;
-  height: 50px;
-`;
 export const EditIcon = styled.img`
   position: absolute;
   right: 33px; /* ⭐️ 오른쪽에서 33px */
@@ -139,13 +140,14 @@ export const ProjectBox = styled.div`
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 0px 2px 2px #f2f2f2;
+
+  margin-bottom: 15px;
 `;
 
-export const PJImg = styled.div`
+export const PJImg = styled.img`
   width: 105px;
   height: 105px;
   flex-shrink: 0;
-  background: #000;
   margin-left: 10px;
   margin-right: 7px;
 `;
@@ -185,6 +187,9 @@ export const PJContent = styled.div`
 `;
 
 export const IconWrap = styled.div`
+  width: 100%;
   display: flex;
   gap: 10px; /* 아이콘 간 간격 */
+  justify-content: flex-end;
+  align-items: center;
 `;

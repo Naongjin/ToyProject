@@ -26,6 +26,11 @@ import Profile from "./pages/My/profile.jsx";
 import Profile_edit from "./pages/My/Profile_edit.jsx";
 
 import Group from "./pages/Group/Group";
+import MyGroup from "./pages/Group/My_group";
+import GroupDetail from "./pages/Group/Group_detail";
+import MyGroupDetail from "./pages/Group/My_group_detail";
+import Progress from "./pages/Group/Progress";
+import CreateGroup from "./pages/Group/Create_group";
 
 function App() {
   /*const [dataList, setDataList] = useState([]);
@@ -58,6 +63,11 @@ function App() {
         <Route path="/addGroup" element={<AddGroup />} />
         <Route path="/detail" element={<Detail />} />
         <Route path="/group" element={<Group />} />
+        <Route path="/mygroup" element={<MyGroup />} />
+        <Route path="/group_detail" element={<GroupDetail />} />
+        <Route path="/my_group_detail" element={<MyGroupDetail />} />
+        <Route path="/progress" element={<Progress />} />
+        <Route path="/create_group" element={<CreateGroup />} />
       </Routes>
     </BrowserRouter>
   );

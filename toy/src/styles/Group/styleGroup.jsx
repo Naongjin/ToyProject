@@ -10,33 +10,26 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 `;
-
-// 상단 뒤로가기 버튼
-export const BackBtn = styled.img`
-  position: absolute;
-  left: 20px;
-  height: 23px;
-  cursor: pointer;
-`;
-
-// 상단 텍스트
-export const PText = styled.div`
-  font-family: "Hakgyoansim Puzzle OTF", sans-serif;
-  font-size: 24px;
-  font-weight: 900;
-  text-align: center;
-  color: #000;
-`;
-
-// 상단 헤더 영역
-export const Header = styled.div`
-  width: 100%;
-  padding: 20px 0;
+export const Bar = styled.div`
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  padding: 15px;
+  height: 50px;
+  width: 100%;
+  .center {
+    flex: 1; // 남은 공간을 모두 차지
+    text-align: center;
+    font-family: "HakgyoansimPuzzleTTF-Black";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 `;
 
 // 검색창
@@ -74,7 +67,7 @@ export const TabMenu = styled.div`
 export const Tab = styled.div`
   color: ${(props) => (props.active ? "#5061FF" : "#969696")};
   cursor: pointer;
-  font-family: "BM JUA_OTF", sans-serif;
+  font-family: "BMJUA";
   font-size: 20px;
   border-bottom: ${(props) => (props.active ? "3px solid #5061ff" : "none")};
   padding-bottom: 5px;
@@ -86,7 +79,7 @@ export const GroupCount = styled.div`
   justify-content: space-between;
   width: 353px;
   color: #000;
-  font-family: "SUIT", sans-serif;
+  font-family: "SUIT";
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -140,28 +133,41 @@ export const GroupTitle = styled.div`
   align-items: center;
   gap: 8px;
   color: #5061ff;
-  font-family: "BM JUA_OTF", sans-serif;
+  font-family: "BMJUA";
   font-size: 20px;
 `;
 
 export const MemberCount = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 14px;
   color: #5061ff;
+  gap: 4px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background-image: url(${(props) => props.src});
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 17px;
+  }
 `;
 
 export const GroupTags = styled.div`
-  font-family: "SUIT", sans-serif;
-  font-size: 12px;
-  color: #555;
+  font-family: "SUIT";
+  font-size: 10px;
+  color: #000;
+  font-weight: 600;
 `;
 
 export const GroupBottom = styled.div`
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   justify-content: flex-end;
-  gap: 8px;
-  margin-top: 30 px;
+  margin-top: 34 px;
 `;
 
 export const Comment = styled.img`
@@ -177,13 +183,17 @@ export const Like = styled.img`
 `;
 
 export const RequestButton = styled.div`
-  padding: 5px 15px;
+  padding: 6px 7px;
   border-radius: 20px;
   border: 1px solid #5061ff;
   background: #fff;
-  color: #5061ff;
-  font-size: 12px;
-  font-family: "SUIT", sans-serif;
+  color: #000;
+  text-align: center;
+  font-family: SUIT;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   cursor: pointer;
 `;
 
@@ -196,16 +206,18 @@ export const FloatingAdd = styled.div`
   height: 90px;
   border-radius: 50%;
   background: #d9d9d9;
-  color: #969696;
-  font-size: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  z-index: 999;
 `;
-
+export const PlusIcon = styled.img`
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+`;
 // 전체 그룹 컨테이너
 export const GroupContainer = styled.div`
   width: 100%;

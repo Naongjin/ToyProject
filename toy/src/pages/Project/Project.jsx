@@ -13,29 +13,22 @@ const Project = () => {
 
   return (
     <P.Container>
-      <img
-        src={`${process.env.PUBLIC_URL}/images/Header.png`}
-        alt="Header"
-        width="345px"
-        height="27px"
-      />
-      <P.Header>
-        <P.BackBtn
-          src={`${process.env.PUBLIC_URL}/images/BackBtn.svg`}
+      <P.Bar>
+        <img
+          src={`${process.env.PUBLIC_URL}/image/halfX.svg`}
           onClick={() => window.history.back()}
-          alt="뒤로가기"
         />
-        <P.PText>프로젝트</P.PText>
-        <P.EditIcon
-          src={`${process.env.PUBLIC_URL}/images/Edit.svg`}
-          alt="edit"
+        <div className="center">프로젝트</div>
+        <img
+          src={`${process.env.PUBLIC_URL}/image/heart.svg`}
+          style={{ width: "26px" }}
         />
-      </P.Header>
+      </P.Bar>
 
       <P.ProjectContainer>
         <P.Search>
           <img
-            src={`${process.env.PUBLIC_URL}/images/Lens.svg`}
+            src={`${process.env.PUBLIC_URL}/image/search.svg`}
             width="18px"
             height="18px"
             alt="search"
@@ -57,7 +50,9 @@ const Project = () => {
         <P.Text>3개의 게시물</P.Text>
 
         <P.ProjectBox onClick={() => navigate(`/Project_detail`)}>
-          <P.PJImg src={`${process.env.PUBLIC_URL}/images/PJ1.svg`}></P.PJImg>
+          <P.PJImg
+            src={`${process.env.PUBLIC_URL}/image/PJImg_small.svg`}
+          ></P.PJImg>
 
           <P.PJContent>
             <P.PJName>[공모전] | 2025 Design De∙∙∙</P.PJName>
@@ -67,13 +62,39 @@ const Project = () => {
 
             <P.IconWrap>
               <img
-                src={`${process.env.PUBLIC_URL}/images/PJ_Comment.svg`}
+                src={`${process.env.PUBLIC_URL}/image/comment.svg`}
                 alt="comment"
                 width="17px"
                 height="22px"
               />
               <img
-                src={`${process.env.PUBLIC_URL}/images/PJ_Like.svg`}
+                src={`${process.env.PUBLIC_URL}/image/scrap_blue.svg`}
+                alt="like"
+                width="18px"
+                height="18px"
+              />
+            </P.IconWrap>
+          </P.PJContent>
+        </P.ProjectBox>
+        <P.ProjectBox onClick={() => navigate(`/Project_detail`)}>
+          <P.PJImg
+            src={`${process.env.PUBLIC_URL}/image/PJImg_small.svg`}
+          ></P.PJImg>
+
+          <P.PJContent>
+            <P.PJName>[공모전] | 2025 국가유산 재∙∙∙</P.PJName>
+            <P.PJDetail>
+              2025년 국가유산 재난안전 공모전을 진행합니다.
+            </P.PJDetail>
+            <P.IconWrap>
+              <img
+                src={`${process.env.PUBLIC_URL}/image/comment.svg`}
+                alt="comment"
+                width="17px"
+                height="22px"
+              />
+              <img
+                src={`${process.env.PUBLIC_URL}/image/scrap_blue.svg`}
                 alt="like"
                 width="18px"
                 height="18px"
