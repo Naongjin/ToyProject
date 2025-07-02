@@ -1,172 +1,215 @@
 import styled from "styled-components";
 
+// 전체 페이지 컨테이너
 export const Container = styled.div`
   position: relative;
   margin: 0 auto;
   width: 393px;
-  height: 1102px;
+  min-height: 100vh;
   background: #fff;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 `;
+
+// 상단 뒤로가기 버튼
 export const BackBtn = styled.img`
   position: absolute;
   left: 20px;
   height: 23px;
-  flex-shrink: 0;
+  cursor: pointer;
 `;
-export const PText = styled.div`
-  width: 125px;
-  height: 36px;
-  flex-shrink: 0;
-  color: #000;
-  text-align: center;
-  font-family: "Hakgyoansim Puzzle OTF";
 
-  font-size: 25px;
-  font-style: normal;
+// 상단 텍스트
+export const PText = styled.div`
+  font-family: "Hakgyoansim Puzzle OTF", sans-serif;
+  font-size: 24px;
   font-weight: 900;
-  line-height: normal;
+  text-align: center;
+  color: #000;
 `;
+
+// 상단 헤더 영역
 export const Header = styled.div`
-  flex-shrink: 0;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
 `;
+
+// 검색창
 export const SearchBar = styled.div`
   width: 353px;
-  height: 36px;
-  flex-shrink: 0;
+  height: 40px;
   border-radius: 20px;
   border: 1px solid #5061ff;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 `;
+export const SearchInput = styled.input`
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  font-family: "SUIT", sans-serif;
+  background: transparent;
+`;
+
+// 탭 메뉴
 export const TabMenu = styled.div`
   display: flex;
   justify-content: space-around;
-  margin: 16px 120px;
+  width: 100%;
+  max-width: 353px;
+  margin-bottom: 20px;
 `;
+
 export const Tab = styled.div`
   color: ${(props) => (props.active ? "#5061FF" : "#969696")};
   cursor: pointer;
-  text-align: center;
-  font-family: "BM JUA_OTF";
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  border-bottom: 3px solid #5061ff;
+  font-family: "BM JUA_OTF", sans-serif;
+  font-size: 20px;
+  border-bottom: ${(props) => (props.active ? "3px solid #5061ff" : "none")};
+  padding-bottom: 5px;
 `;
+
+// 그룹 개수와 필터
 export const GroupCount = styled.div`
-  color: #000;
-  text-align: center;
-  font-family: SUIT;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  justify-content: space-around;
   display: flex;
-  margin: 22px 26px;
+  justify-content: space-between;
+  width: 353px;
+  color: #000;
+  font-family: "SUIT", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
 `;
+
 export const FilterIcon = styled.img`
-  width: 18.75px;
-  height: 18.75px;
-  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 `;
+
+// 그룹 리스트
 export const GroupList = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
+  align-items: center;
 `;
+
+// 그룹 카드
 export const GroupCard = styled.div`
   width: 353px;
   height: 120px;
-  display: flex; /*썸네일, 정보 가로 배치 */
+  display: flex;
   align-items: center;
-  padding: 12px;
-  flex-shrink: 0;
+  padding: 10px 16px;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0px 0px 2px 2px #f2f2f2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 `;
-export const GroupThumbnail = styled.div`
+
+export const GroupThumbnail = styled.img`
   width: 87px;
   height: 87px;
-  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
 `;
+
 export const GroupInfo = styled.div`
-  width: 107px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 87px;
 `;
+
 export const GroupTitle = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #5061ff;
-  font-family: "BM JUA_OTF";
+  font-family: "BM JUA_OTF", sans-serif;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 `;
 
 export const MemberCount = styled.div`
+  font-size: 14px;
   color: #5061ff;
-  font-family: "BM JUA_OTF";
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 `;
+
 export const GroupTags = styled.div`
-  color: #000;
-  text-align: center;
-  font-family: SUIT;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-family: "SUIT", sans-serif;
+  font-size: 12px;
+  color: #555;
 `;
-export const RequestButton = styled.div`
-  width: 69px;
-  height: 31px;
-  flex-shrink: 0;
-  border-radius: 30px;
-  border: 1px solid #5061ff;
-  background: #fff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-  text-align: center;
-`;
+
 export const GroupBottom = styled.div`
-  width: 110px;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 30 px;
 `;
+
 export const Comment = styled.img`
   width: 18px;
   height: 18px;
-  flex-shrink: 0;
+  cursor: pointer;
 `;
+
 export const Like = styled.img`
-  width: 17px;
-  height: 22px;
-  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 `;
+
+export const RequestButton = styled.div`
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid #5061ff;
+  background: #fff;
+  color: #5061ff;
+  font-size: 12px;
+  font-family: "SUIT", sans-serif;
+  cursor: pointer;
+`;
+
+// 플로팅 버튼
 export const FloatingAdd = styled.div`
-  position: fixed; /*떠있게 */
+  position: absolute;
   right: 20px;
-  bottom: 80px;
+  bottom: 115px;
   width: 90px;
   height: 90px;
-  flex-shrink: 0;
-  fill: #d9d9d9;
-  font-size: 20px;
+  border-radius: 50%;
+  background: #d9d9d9;
   color: #969696;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 `;
+
+// 전체 그룹 컨테이너
 export const GroupContainer = styled.div`
-  width: 393px;
-  height: 990px;
-  flex-shrink: 0;
+  width: 100%;
+  padding: 0 20px;
   background: linear-gradient(180deg, rgba(220, 234, 255, 0.3) 0%, #fff 100%);
+  flex: 1;
 `;

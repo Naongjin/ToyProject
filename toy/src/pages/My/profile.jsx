@@ -23,22 +23,26 @@ const Profile = () => {
           alt="Profile"
         ></img>
         <P.LogIn>
-          <P.LogIn_please></P.LogIn_please>
-          로그인 하고 지금 바로
-          <br />
-          프로젝트에 참여해 보세요!
+          <P.LogIn_please>
+            김솜솜 <P.BlackText>님</P.BlackText>
+          </P.LogIn_please>
+          <P.BenefitText>나의 혜택</P.BenefitText>
         </P.LogIn>
       </P.ProfileBox>
       <P.Edit onClick={GoEdit}>프로필 수정</P.Edit>
       <P.Stories>
-        활동내역
+        활동 내역
         <P.StoriesBox>
-          <P.Story>내 그룹</P.Story>
-          <P.Story>찜</P.Story>
-          <P.Story>스크랩</P.Story>
+          <P.StoryRow>
+            <P.Story>내 그룹</P.Story>
+            <P.Story>찜</P.Story>
+          </P.StoryRow>
+          <P.StoryRow>
+            <P.Story>스크랩</P.Story>
+          </P.StoryRow>
         </P.StoriesBox>
       </P.Stories>
-      <BottomNav idx={-1}></BottomNav>
+      <BottomNav idx={4}></BottomNav>
     </P.Container>
   );
 };

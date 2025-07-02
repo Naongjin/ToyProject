@@ -41,6 +41,7 @@ const Profile_edit = () => {
     <P.Container>
       <P.Header>
         <P.BackBtn
+          onClick={() => window.history.back()}
           src={`${process.env.PUBLIC_URL}/image/halfX.svg`}
           alt="뒤로가기"
         />

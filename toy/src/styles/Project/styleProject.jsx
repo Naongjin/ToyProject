@@ -1,20 +1,24 @@
 import styled from "styled-components";
+
 export const Container = styled.div`
   position: relative;
   margin: 0 auto;
-  width: 393px;
-  height: 1362px;
+  width: 100%;
+  max-width: 393px;
+  min-height: 100vh;
   background: #fff;
   display: flex;
   align-items: center;
   flex-direction: column;
 `;
+
 export const BackBtn = styled.img`
   position: absolute;
   left: 20px;
   height: 23px;
   flex-shrink: 0;
 `;
+
 export const PText = styled.div`
   width: 125px;
   height: 36px;
@@ -27,20 +31,37 @@ export const PText = styled.div`
   font-weight: 900;
   line-height: normal;
 `;
+
 export const Header = styled.div`
+  position: relative; /* ⭐️ 필수! 자식 absolute 기준 */
   flex-shrink: 0;
+  display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 393px;
+  height: 50px;
 `;
+export const EditIcon = styled.img`
+  position: absolute;
+  right: 33px; /* ⭐️ 오른쪽에서 33px */
+  width: 20px; /* 필요하다면 크기 고정 */
+  height: 20px;
+  cursor: pointer;
+`;
+
 export const ProjectContainer = styled.div`
-  width: 393px;
-  height: 722px;
+  width: 100%;
+  max-width: 393px;
+  height: auto;
   flex-shrink: 0;
   background: linear-gradient(180deg, rgba(220, 234, 255, 0.3) 0%, #fff 100%);
   display: flex;
   align-items: center;
   flex-direction: column;
 `;
+
 export const Search = styled.div`
   width: 353px;
   height: 36px;
@@ -54,40 +75,64 @@ export const Search = styled.div`
   margin-top: 22px;
   margin-bottom: 18px;
 `;
+
 export const CategoryBox = styled.div`
-  width: 393px;
-  height: 80px;
-  gap: 10px;
+  width: 313;
+  max-width: 393px;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 20px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
 `;
+
 export const Category = styled.div`
-  width: 70px;
-  height: 30px;
-  flex-shrink: 0;
+  width: fit-content;
+  padding: 3px 12px;
+  height: 32px;
   border-radius: 30px;
   border: 1px solid #5061ff;
-  background: #fff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  display: inline-block;
-  padding: 6px 8px;
-  justify-content: center;
+  background: ${(props) => (props.$active ? "#5061FF" : "#fff")};
+  color: ${(props) => (props.$active ? "#fff" : "#000")};
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  display: flex;
   align-items: center;
-`;
-export const Text = styled.text`
-  color: #000;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s;
   text-align: center;
   font-family: SUIT;
   font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  &:hover {
+    background: #5061ff;
+    color: #fff;
+  }
 `;
+
+export const Text = styled.text`
+  color: #000;
+  text-align: left;
+  font-family: SUIT;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 15px;
+  align-self: flex-start; /* 부모 flex 기준 왼쪽으로 붙음 */
+  margin-left: 26px; /* 왼쪽에서 26px */
+`;
+
 export const ProjectBox = styled.div`
   display: flex;
-  flex-dirction: row;
-  justify-content: center;
+  flex-direction: row; /* 오타 수정 */
+
+  align-items: center;
   width: 353px;
   height: 118px;
   flex-shrink: 0;
@@ -95,24 +140,33 @@ export const ProjectBox = styled.div`
   background: #fff;
   box-shadow: 0px 0px 2px 2px #f2f2f2;
 `;
+
 export const PJImg = styled.div`
   width: 105px;
   height: 105px;
   flex-shrink: 0;
   background: #000;
+  margin-left: 10px;
+  margin-right: 7px;
 `;
+
 export const PJ = styled.div`
   width: 200px;
   height: 118px;
 `;
+
 export const PJName = styled.div`
   color: #000;
   font-family: SUIT;
-  font-size: 17px;
+  font-size: 15.5px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+  width: fit-content;
+  margin-top: 10px;
+  margin-bottom: 8px;
 `;
+
 export const PJDetail = styled.div`
   color: #000;
   font-family: SUIT;
@@ -120,4 +174,17 @@ export const PJDetail = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+`;
+export const PJContent = styled.div`
+  display: flex; /* 핵심: 가로 배치 */
+  flex-direction: column; /* 텍스트 + 아이콘 나란히 */
+  justify-content: space-between; /* 양쪽 끝 정렬 */
+  align-items: start; /* 세로 가운데 */
+  width: 100%;
+  padding: 10px; /* 필요하면 여백 */
+`;
+
+export const IconWrap = styled.div`
+  display: flex;
+  gap: 10px; /* 아이콘 간 간격 */
 `;

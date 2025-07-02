@@ -11,6 +11,7 @@ import Post from "./pages/Project/Post.jsx";
 import Temp from "./pages/Project/Temp.jsx";
 import Trash from "./pages/Project/Trash.jsx";
 import Project from "./pages/Project/Project.jsx";
+import ProjectDetail from "./pages/Project/Project_detail.jsx";
 
 import Find from "./pages/FindTeam/FindTeam.jsx";
 import Detail from "./pages/FindTeam/Find_detail.jsx";
@@ -45,6 +46,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile_edit" element={<Profile_edit />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/project_detail" element={<ProjectDetail />} />
         <Route path="/home" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/search" element={<Search />} />
@@ -55,6 +57,7 @@ function App() {
         <Route path="/find" element={<Find />} />
         <Route path="/addGroup" element={<AddGroup />} />
         <Route path="/detail" element={<Detail />} />
+        <Route path="/group" element={<Group />} />
       </Routes>
     </BrowserRouter>
   );
